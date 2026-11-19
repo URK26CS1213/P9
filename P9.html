@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Medihive - Online Healthcare</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#e8f7f7;
+    margin:0;
+    padding:20px;
+    animation:fadeIn 1.5s ease-in-out;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+    background:white;
+    border-radius:12px;
+    animation:fadeIn 1.5s ease-in-out;
+}
+
+h1{
+    text-align:center;
+    color:#008080;
+    animation:slideDown 1s ease;
+}
+
+h2{
+    color:#008080;
+}
+
+p{
+    line-height:1.6;
+}
+
+.main-image{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:10px;
+    animation:floatImage 3s ease-in-out infinite;
+}
+
+.layout{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
+
+.box{
+    flex:1;
+    padding:15px;
+    background:#e0f7f7;
+    border-radius:10px;
+    transition:transform .3s,box-shadow .3s;
+}
+
+.box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 8px 15px #aaa;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+}
+
+.gallery img{
+    width:100%;
+    height:130px;
+    object-fit:cover;
+    border-radius:8px;
+    transition:transform .4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.08);
+}
+
+footer{
+    text-align:center;
+    margin-top:20px;
+    color:#555;
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+@keyframes slideDown{
+    from{
+        transform:translateY(-25px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+@keyframes floatImage{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+}
+
+@media(max-width:768px){
+    .gallery{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+@media(max-width:480px){
+    .layout{
+        flex-direction:column;
+    }
+
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .main-image{
+        height:180px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce){
+    *{
+        animation:none!important;
+        transition:none!important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Medihive</h1>
+
+<img src="medihive.jpg"
+     alt="Medihive healthcare service"
+     class="main-image">
+
+<h2>Welcome to Medihive</h2>
+
+<p>
+Medihive provides telemedicine and online consultation services.
+It helps patients connect with healthcare professionals easily
+and access healthcare services online.
+</p>
+
+<div class="layout">
+
+<div class="box">
+<h3>Telemedicine</h3>
+<p>
+Consult healthcare professionals online from anywhere.
+</p>
+</div>
+
+<div class="box">
+<h3>Online Consultation</h3>
+<p>
+Get medical guidance and consultation through online services.
+</p>
+</div>
+
+</div>
+
+<h2>Medihive Services</h2>
+
+<div class="gallery">
+<img src="medihive.jpg" alt="Online consultation 1">
+<img src="medihive.jpg" alt="Telemedicine 2">
+<img src="medihive.jpg" alt="Healthcare 3">
+<img src="medihive.jpg" alt="Doctor consultation 4">
+<img src="medihive.jpg" alt="Online consultation 5">
+<img src="medihive.jpg" alt="Telemedicine 6">
+<img src="medihive.jpg" alt="Healthcare 7">
+<img src="medihive.jpg" alt="Doctor consultation 8">
+</div>
+
+<footer>
+<p>Medihive - Simple, Smart and Accessible Healthcare</p>
+</footer>
+
+</div>
+
+</body>
+</html>
